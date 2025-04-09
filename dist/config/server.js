@@ -41,6 +41,9 @@ class App {
         });
     }
     routes() {
+        this.app.get("/", (_req, res) => {
+            res.send("👋 Hello backend TODO App for idiatingTribe!");
+        });
         const todoRoutes = new todoRoutes_1.todosRoute(this.server);
         todoRoutes.route(this.app);
     }
