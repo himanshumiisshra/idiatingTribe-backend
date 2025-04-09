@@ -51,6 +51,11 @@ class App {
 
   
     private routes(): void {
+
+        this.app.get("/", (_req, res) => {
+            res.send("👋 Hello backend TODO App for idiatingTribe!");
+        });
+
         const todoRoutes = new todosRoute(this.server);
         todoRoutes.route(this.app);
       
